@@ -1,0 +1,24 @@
+{
+  "name": "2.weatherapp",
+  "version": "1.0.0",
+  "description": "info",
+  "main": "app.js",
+  "dependencies": {
+    "request": "^2.83.0",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/art3xias23/WeatherApp-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/art3xias23/WeatherApp-NodeJS/issues"
+  },
+  "homepage": "https://github.com/art3xias23/WeatherApp-NodeJS#readme"
+}
