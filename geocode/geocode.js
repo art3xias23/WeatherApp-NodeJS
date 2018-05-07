@@ -19,10 +19,8 @@ var geocodeAddress =(address, callback) => {
   else if(body.status==='OK')
   {
     callback(undefined, {
-      address: body.results[0].formatted_address,
-      latitude: body.results[0].geometry.location.lat,
-      longitude: body.results[0].geometry.location.lng
-
+      longitude: body.results[0].geometry.location.lng,
+      latitude: body.results[0].geometry.location.lat
   });
 
   }
@@ -33,3 +31,4 @@ var geocodeAddress =(address, callback) => {
 };
 
 module.exports.geocodeAddress = geocodeAddress;
+//28485c297166e543f14f690b405c20b9

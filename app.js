@@ -1,5 +1,7 @@
 const yargs = require('yargs');
 
+const temperature = require('./temperature/temp');
+
 const geocode = require('./geocode/geocode');
 const argv = yargs
     .options({
@@ -19,6 +21,15 @@ const argv = yargs
         console.log(errorMessage);
          }
         else {
-          console.log(JSON.stringify(results, undefined, 2));
+          temperature.findTemperature(results, (errorMessage, result) =>
+        {
+          if (errorMessage)
+          {
+            console.log(errorMessage);
+          }
+          else {
+            console.log(result);
+          }
+        });
       }
     });
