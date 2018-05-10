@@ -1,4 +1,17 @@
+
+const yargs = require('yargs');
 const request = require('request');
+const argv = yargs
+.options(
+{
+  a: {
+    alias: 'Address',
+    describe: 'Provide an address in order to find the weather',
+    demand: true
+  }
+})
+.help()
+.argv;
 
 
 var geocodeAddress = (address) =>
@@ -39,7 +52,7 @@ return new Promise((resolve, reject) =>
 })})};
 
 
-geocodeAddress('Leeds').then((location) =>
+geocodeAddress(argv.Address).then((location) =>
 {
 console.log(JSON.stringify(location, undefined, 2));
 }, (errorMessage) =>
