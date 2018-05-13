@@ -54,7 +54,7 @@ return new Promise((resolve, reject) =>
 
 geocodeAddress(argv.Address).then((location) =>
 {
-console.log(JSON.stringify(location, undefined, 2));
+console.log((location, undefined, 2));
 }, (errorMessage) =>
 {
   console.log(errorMessage);
